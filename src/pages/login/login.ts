@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, LoadingController, Loading } from 'ionic-angular';
 
 import { TabsPage } from '../tabs/tabs';
 
@@ -9,8 +9,31 @@ import { TabsPage } from '../tabs/tabs';
 })
 export class LoginPage {
 
-  constructor(public navCtrl: NavController) {
-    this.navCtrl.setRoot(TabsPage);
+  loading: Loading;
+
+  constructor(public navCtrl: NavController,
+              private loadingCtrl: LoadingController) {
+
+
+    // this.showLoading();
+    // setTimeout(() =>
+    //   {
+    //       this.loading.dismiss();
+    //       this.navCtrl.setRoot(TabsPage);
+    //   },
+    //   5000);
+  }
+
+  register() {
+    this.nav.push(RegisterPage);
+  }
+
+
+  showLoading() {
+    this.loading = this.loadingCtrl.create({
+      content: 'Please wait...'
+    });
+    this.loading.present();
   }
 
 }

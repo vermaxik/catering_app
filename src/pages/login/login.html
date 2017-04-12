@@ -6,5 +6,20 @@
 
 
 <ion-content padding>
-
+  <ion-list>
+    <ion-item>
+      <ion-label floating>Username</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Password</ion-label>
+      <ion-input type="password"></ion-input>
+    </ion-item>
+  </ion-list>
+  <ion-row>
+    <ion-col class="signup-col">
+      <button ion-button class="submit-btn" full type="submit">Login</button>
+      <button ion-button class="register-btn" block clear (click)="register()">Create New Account</button>
+    </ion-col>
+  </ion-row>
 </ion-content>
