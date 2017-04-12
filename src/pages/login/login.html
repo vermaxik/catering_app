@@ -1,25 +1,29 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>Login</ion-title>
-  </ion-navbar>
-</ion-header>
-
-
-<ion-content padding>
-  <ion-list>
-    <ion-item>
-      <ion-label floating>Username</ion-label>
-      <ion-input type="text"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label floating>Password</ion-label>
-      <ion-input type="password"></ion-input>
-    </ion-item>
-  </ion-list>
-  <ion-row>
-    <ion-col class="signup-col">
-      <button ion-button class="submit-btn" full type="submit">Login</button>
-      <button ion-button class="register-btn" block clear (click)="register()">Create New Account</button>
-    </ion-col>
-  </ion-row>
+<ion-content padding class="login-content">
+  <ion-grid>
+    <ion-row center>
+      <ion-col>
+        <ion-item>
+          <ion-icon name="cafe" item-left></ion-icon>
+          GL Catering
+          <ion-badge item-right>260k</ion-badge>
+        </ion-item>
+        <ion-list>
+          <ion-item>
+            <ion-label floating>Username</ion-label>
+            <ion-input type="text"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label floating>Password</ion-label>
+            <ion-input type="password"></ion-input>
+          </ion-item>
+        </ion-list>
+        <ion-row>
+          <ion-col class="signup-col">
+            <button ion-button class="submit-btn" full type="submit">Login</button>
+            <button ion-button class="register-btn" block clear (click)="register()">Sign Up</button>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
