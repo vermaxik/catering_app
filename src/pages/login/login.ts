@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, LoadingController, Loading } from 'ionic-angular';
 
 import { RegisterPage } from '../register/register';
-//import { TabsPage } from '../tabs/tabs';
+import { TabsPage } from '../tabs/tabs';
 
 @Component({
   selector: 'page-login',
@@ -16,13 +16,13 @@ export class LoginPage {
               private loadingCtrl: LoadingController) {
 
 
-    // this.showLoading();
-    // setTimeout(() =>
-    //   {
-    //       this.loading.dismiss();
-    //       this.navCtrl.setRoot(TabsPage);
-    //   },
-    //   5000);
+    this.showLoading();
+    setTimeout(() =>
+      {
+          this.loading.dismiss();
+          this.navCtrl.setRoot(TabsPage);
+      },
+      5000);
   }
 
   register() {
