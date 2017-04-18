@@ -1,0 +1,12 @@
+<ion-grid>
+  <ion-row>
+    <ion-col col-9><b>Name</b></ion-col>
+    <ion-col col-3></ion-col>
+  </ion-row>
+  <ion-row *ngFor="let item of items;">
+    <ion-col col-8>{{item}}</ion-col>
+    <ion-col col-3>
+      <button ion-button round small color="light">Order +1</button>
+    </ion-col>
+  </ion-row>
+</ion-grid>
